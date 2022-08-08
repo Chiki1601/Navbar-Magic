@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> navbar magic</title>
+  <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div class="navigation">
+    <ul>
+      <li v-for="(item, index) in navigation" :key="index" class="list" :class="item.active ? 'active': ''" @click="activeLink(item,  index)">
+        <a>
+          <i class="iconx">
+            <span class="iconify" :data-icon="item.icon" data-width="26" data-height="26">
+            </span>
+          </i>
+          <span class="text">{{item.text}}</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://unpkg.com/vue@next'></script><script  src="./script.js"></script>
+
+</body>
+</html>
